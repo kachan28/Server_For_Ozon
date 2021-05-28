@@ -1,0 +1,38 @@
+{{ define "schedules" }}
+{{ template "header" }}
+<script src="/internal/templates/js/schedules.js"></script>
+<div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Система управления</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link" aria-current="page" href="/">Списки</a>
+        <a class="nav-link active" href="#">Расписания</a>
+        <a class="nav-link" href="/statements">Ведомости</a>
+      </nav>
+    </div>
+  </header>
+  <main class="px-3">
+    <br><h3>Расписания</h3>
+
+    <p class="lead">
+    <div>
+      <nav id="nav" class="nav nav-masthead justify-content-center">
+        <a id="by_groups" class="nav-link" href="">По группам</a>
+        <a id="by_lecturers" class="nav-link" href="">По преподавателям</a>
+      </nav>
+    </div><br>
+
+    <div id="switcher">
+      <select id="swch" class="form-select" aria-label="Default select example"></select>
+    </div>
+
+    <ul id="schdls" class="list-group"></ul>
+    <div class="scrble">
+      <ul id="info" class="list-group"></ul>
+    </div>
+    </p>
+
+  </main>
+{{ template "footer" }}
+{{ end }}

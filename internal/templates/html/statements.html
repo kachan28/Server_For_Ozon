@@ -1,0 +1,65 @@
+{{ define "statements" }}
+{{ template "header" }}
+<script src="/internal/templates/js/statements.js"></script>
+<div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Система управления</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link" aria-current="page" href="/">Списки</a>
+        <a class="nav-link" href="/schedules">Расписания</a>
+        <a class="nav-link active" href="#">Ведомости</a>
+      </nav>
+    </div>
+  </header>
+  <main class="px-3">
+    <br><h3>Ведомости</h3>
+
+    <p class="lead">
+      <div>
+        <nav id="nav" class="nav nav-masthead justify-content-center">
+          <a id="by_groups" class="nav-link" href="">На группу</a>
+          <a id="by_students" class="nav-link" href="">На студента</a>
+        </nav>
+      </div><br>
+
+      <div class="row">
+        <div class="col">
+          <div id="switcher-1">
+            <select id="swch-1" class="form-select" aria-label="Default select example"></select>
+          </div>
+        </div>
+        <div class="col">
+          <div id="switcher-2">
+            <select id="swch-2" class="form-select" aria-label="Default select example"></select>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="subject_title col"><p class="label">Предмет: </p><p class="value"></p></div>
+        <div class="fio_lecturer col"><p class="label">Преподаватель: </p><p class="value"></p></div>
+        <div class="date col"><p class="label">Дата: </p><p class="value"></p></div>
+        <div class="cath_number col"><p class="label">Кафедра: </p><p class="value"></p></div>
+      </div>
+
+      <ul id="stmnts" class="list-group"></ul>
+      <div class="scrble">
+        <ul id="info" class="list-group"></ul>
+      </div>
+
+      <div class="row">
+        <div class="col count-no"><p class="label">Неявки: </p><p class="value"></p></div>
+        <div class="col count-2"><p class="label">"2": </p><p class="value"></p></div>
+        <div class="col count-3"><p class="label">"3": </p><p class="value"></p></div>
+        <div class="col count-4"><p class="label">"4": </p><p class="value"></p></div>
+        <div class="col count-5"><p class="label">"5": </p><p class="value"></p></div>
+        <div class="col count-nez"><p class="label">Незачет: </p><p class="value"></p></div>
+        <div class="col count-zach"><p class="label">Зачет: </p><p class="value"></p></div>
+        <div class="col count-average"><p class="label">Ср. балл: </p><p class="value"></p></div>
+      </div>
+    </p>
+
+  </main>
+  {{ template "footer" }}
+  {{ end }}
